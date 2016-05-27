@@ -3,15 +3,15 @@
 ## Completed Features
 
 1. User roles
-* Subscriber
-* Author
-* Editor
-* Admin
+  * Subscriber
+  * Author
+  * Editor
+  * Admin
 2. Post
-* User
-* Title
-* Body
-* Auto generated slugs
+  * User
+  * Title
+  * Body
+  * Auto generated slugs
 
 ## Planned Features
 
