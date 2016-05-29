@@ -12,11 +12,11 @@
   * Title
   * Body
   * Auto generated slugs
+  * Soft Deletes of Posts
 
 ## Planned Features
 
-1. Soft Deletes of Posts
-2. Posts - publish, unpublish, publish date
+1. Posts - publish, unpublish, publish date
 
 ## My Projects
 
