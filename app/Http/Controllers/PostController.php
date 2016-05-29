@@ -61,6 +61,9 @@ class PostController extends Controller
     public function show($slug)
     {
         $post = Post::where('slug', $slug)->first();
+
+        if(! $post) return response('Sorry, Nothing found here.', 404); 
+
         return view('posts.show', compact('post'));
     }
 

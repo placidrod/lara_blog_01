@@ -25,5 +25,16 @@
 				}
 			});
 		});
+
+		function confirmDelete() {
+			var conf = confirm("Are you sure you want to delete this record?");
+			if(conf) {
+				return true;
+			}
+			return false;
+		}
+
+		$('.btn-delete-record').on('click', confirmDelete);
+		$('.form-delete-record').on('submit', confirmDelete);
 	});
 })(jQuery);
