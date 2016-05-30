@@ -18,7 +18,7 @@ class AppServiceProvider extends ServiceProvider
         {
             $title = $post->title;
             $proposed_slug = strtolower(str_replace(' ', '-', $title));
-            $existing_slug = Post::where('slug', $proposed_slug)->where('id', '<>', $post->id)->first();
+            $existing_slug = Post::where([ ['slug', $proposed_slug], ['id', '<>', $post->id] ])->first();
 
             if(! $existing_slug) {
                 $post->slug = $proposed_slug;
@@ -28,7 +28,8 @@ class AppServiceProvider extends ServiceProvider
                 do {
                     $number_added_to_slug += 1;
                     $numbered_proposed_slug = $proposed_slug . '-' . $number_added_to_slug;
-                    $existing_slug = Post::where('slug', $numbered_proposed_slug)->where('id', '<>', $post->id)->first();
+                    // $existing_slug = Post::where('slug', $numbered_proposed_slug)->where('id', '<>', $post->id)->first();
+                    $existing_slug = Post::where([ ['slug', $numbered_proposed_slug], ['id', '<>', $post->id] ])->first();
                 } while($existing_slug);
 
                 $post->slug = $numbered_proposed_slug;

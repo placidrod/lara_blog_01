@@ -42,9 +42,15 @@ class PostController extends Controller
     {
         $this->authorize('author-post');
 
+        if($request->publish_status == 'published') {
+            $this->authorize('publish-post');
+        }
+
         $this->validate($request, [
             'title' => 'required|min:3',
             'body' => 'required',
+            'publish_status' => 'required',
+            'published_at' => 'required_if:publish_status,publish',
         ]);
 
         auth()->user()->posts()->create($request->all());
@@ -91,9 +97,15 @@ class PostController extends Controller
     {
         $this->authorize('update-post', $post);
 
+        if($request->publish_status == 'published') {
+            $this->authorize('publish-post');
+        }
+
         $this->validate($request, [
             'title' => 'required|min:3',
             'body' => 'required',
+            'publish_status' => 'required',
+            'published_at' => 'required_if:publish_status,publish',
         ]);
 
         $post->update($request->all());

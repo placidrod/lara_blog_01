@@ -14,16 +14,14 @@
         <div>
           <a href="{{ route('posts.show', $post->slug) }}" class="text-primary"><strong>Read more</strong></a>
           @can('update-post', $post)
-          <a href="{{ route('posts.edit', $post->id) }}" class="text-warning"><strong>Edit</strong></a>
+              <a href="{{ route('posts.edit', $post->id) }}" class="text-warning"><strong>Edit</strong></a>
           @endcan
           @can('delete-post', $post)
           <form action="{{ route('posts.destroy', $post->id) }}" class="form-inline form-inline-with-single-button form-delete-record" method="post">
             {{ method_field('DELETE') }}
             {{ csrf_field() }}
             <button type="submit" class="btn-link btn-delete-record"><strong class="text-danger">Delete</strong></button>
-            <!-- <input type="submit" class="text-danger" value="Delete" style="font-weight:bold;"> -->
           </form>
-          
           @endcan          
         </div>
       </div>

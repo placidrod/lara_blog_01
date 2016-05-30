@@ -1,66 +1,34 @@
 @extends('layouts.default')
 
+@section('title', 'All Posts')
+
 @section('content')
+
 <div class="container">
-    <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-            <h2>Project Features</h2>
-            
-            <div class="panel panel-default">
-                <div class="panel-heading"><h4>User Management</h4></div>
-                <div class="panel-body">
-                    <ol>
-                        <li>Unregistered users can view posts</li>
-                        <li>Four types of user roles</li>
-                        <ol type="a">
-                            <li>Subscriber</li>
-                                <ul>
-                                    <li>Can do all that Unregistered Users can</li>
-                                    <!-- <li>Can comment on posts</li> -->
-                                </ul>
-                            <li>Author</li>
-                                <ul>
-                                    <li>Can do all that Subscirbers can</li>
-                                    <li>Can create posts</li>
-                                    <li>Can update own posts</li>
-                                </ul>
-                            <li>Editor</li>
-                                <ul>
-                                    <li>Can do all that Editors can</li>
-                                    <li>Can update and delete others' posts</li>
-                                </ul>                            
-                            <li>Admin</li>
-                                <ul>
-                                    <li>Can do all that Editors can</li>
-                                    <li>Can manage users</li>
-                                </ul>                            
-                        </ol>
-                    </ol>
-                    <h4>Technical Features</h4>
-                    <ol>
-                        <li>Viewing appropriate links based on roles</li>
-                        <li>Ajax based update roles of users</li>
-                        <li>Restriction to assign user as Admin</li>
-                        <li>Updating user roles</li>
-                        <ul>
-                            <li>Automatically show and hide message for update</li>
-                            <li>Show message for errors and warnings with close buttons</li>
-                        </ul>
-                    </ol>
-                </div>
-            </div>
-
-            <div class="panel panel-default">
-                <div class="panel-heading"><h4>Posts</h4></div>
-                <div class="panel-body">
-                    <ol>
-                        <li>Slug based navigation</li>
-                        
-                    </ol>
-                </div>
-            </div>
-
+  <h1>All Posts</h1>
+  @if(count($posts))
+    @foreach($posts as $post)
+      <h3>{{$post->title}}</h3>
+      <div>
+        {{$post->body}}
+        <div>
+          <a href="{{ route('posts.show', $post->slug) }}" class="text-primary"><strong>Read more</strong></a>
+          @can('update-post', $post)
+              <a href="{{ route('posts.edit', $post->id) }}" class="text-warning"><strong>Edit</strong></a>
+          @endcan
+          @can('delete-post', $post)
+          <form action="{{ route('posts.destroy', $post->id) }}" class="form-inline form-inline-with-single-button form-delete-record" method="post">
+            {{ method_field('DELETE') }}
+            {{ csrf_field() }}
+            <button type="submit" class="btn-link btn-delete-record"><strong class="text-danger">Delete</strong></button>
+          </form>          
+          @endcan          
         </div>
-    </div>
+      </div>
+    @endforeach
+  @else
+    <h3>Sorry. No posts here !!</h3>
+  @endif
 </div>
+
 @endsection

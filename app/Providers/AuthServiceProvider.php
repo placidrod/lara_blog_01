@@ -44,10 +44,15 @@ class AuthServiceProvider extends ServiceProvider
 
         $gate->define('update-post', function ($user, $post)
         {
-            return $user->id === $post->user_id || $user->isEditor();
+            return ($user->id === $post->user_id && $post->publish_status !== 'published') || $user->isEditor();
         });
 
         $gate->define('delete-post', function ($user)
+        {
+            return $user->isAdmin() || $user->isEditor();
+        });
+
+        $gate->define('publish-post', function ($user)
         {
             return $user->isAdmin() || $user->isEditor();
         });

@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -9,14 +10,26 @@ class Post extends Model
 {
   use SoftDeletes;
 
-  /**
-   * The attributes that should be mutated to dates.
-   *
-   * @var array
-   */
-  protected $dates = ['deleted_at'];  
+  protected $dates = ['created_at', 'updated_at', 'deleted_at', 'published_at'];  
 
-  protected $fillable = ['title', 'body'];
+  protected $fillable = ['title', 'body', 'publish_status', 'published_at'];
+
+  public function scopePublished($query)
+  {
+    return $query->where([ ['publish_status','published'], ['published_at', '<', Carbon::now()] ])
+                ->orderBy('published_at', 'desc')
+                ->get();
+  }
+
+  public function setPublishedAtAttribute($date)
+  {
+    $this->attributes['published_at'] = Carbon::createFromFormat('Y-m-d', $date);
+  }
+
+  public function getPublishedAtAttribute($date)
+  {
+    return  Carbon::parse($date)->toDateString();
+  }
 
   public function user()
   {
