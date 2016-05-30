@@ -13,10 +13,12 @@
   * Body
   * Auto generated slugs
   * Soft Deletes of Posts
+  * Draft, Pending Review by Author
+  * Publish Post by Editor and Admin
 
 ## Planned Features
 
-1. Posts - publish, unpublish, publish date
+1. Posts - Categories
 
 ## My Projects
 
