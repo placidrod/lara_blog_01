@@ -21,6 +21,13 @@ class Post extends Model
                 ->get();
   }
 
+  public function scopeUnpublished($query)
+  {
+    return $query->where('publish_status','<>', 'published')
+                ->orderBy('updated_at')
+                ->get();
+  }
+
   public function setPublishedAtAttribute($date)
   {
     $this->attributes['published_at'] = Carbon::createFromFormat('Y-m-d', $date);

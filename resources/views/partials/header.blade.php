@@ -19,6 +19,9 @@
         @can('author-post')
         <li><a href="{{ route('posts.create') }}">Create Post</a></li>
         @endcan
+        @can('publish-post')
+        <li><a href="{{ route('posts.unpublished-posts') }}">Posts Pending Reveiew</a></li>
+        @endcan
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -39,6 +42,7 @@
         <button type="submit" class="btn btn-default">Submit</button>
       </form> -->
       <ul class="nav navbar-nav navbar-right">
+        <li><a href="{{ url('project-details') }}">Project Details</a></li>
         @can('manage-users')
         <li><a href="{{ url('users') }}">Manage Users</a></li>
         @endcan
