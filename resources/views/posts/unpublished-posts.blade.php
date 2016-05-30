@@ -9,6 +9,7 @@
   @if(count($posts))
     @foreach($posts as $post)
       <h3>{{$post->title}}</h3>
+      <h5>by {{ $post->user->name }}</h5>
       <div>
         {{$post->body}}
         <div>
