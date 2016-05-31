@@ -22,6 +22,19 @@
       </div>
       <div class="col-md-4">
         <div class="form-group">
+          <label class="zero-bottom-margin">Categories</label>
+            @if(count($categories))
+              @foreach($categories as $category)
+                <div class="checkbox category-select-checkbox">
+                  <label>
+                    <input type="checkbox" value="{{ $category->id }}" name="categories[]">
+                    {{ $category->title }}
+                  </label>
+                </div>           
+              @endforeach
+            @endif
+        </div>
+        <div class="form-group">
           <label for="body">Publish Status</label>
           <select name="publish_status" id="publish_status" class="form-control">
             <option value="">Select</option>

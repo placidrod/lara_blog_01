@@ -27,3 +27,10 @@ body {
 .form-inline-with-single-button button {
 	padding: 0 !important;
 }
+.category-select-checkbox {
+	margin-top: 2px !important;
+	margin-bottom: 2px !important;
+}
+.zero-bottom-margin {
+	margin-bottom: 0;
+}

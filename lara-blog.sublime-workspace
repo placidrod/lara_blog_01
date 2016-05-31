@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"post",
+				"post_categories"
+			],
+			[
+				"vi",
+				"visit"
+			],
+			[
+				"ti",
+				"this"
+			],
+			[
+				"Post",
+				"PostController"
+			],
+			[
+				"published",
+				"published_at"
+			],
+			[
 				"un",
 				"unpublished_posts"
 			],
@@ -42,10 +62,6 @@
 			[
 				"requ",
 				"request"
-			],
-			[
-				"ti",
-				"title"
 			],
 			[
 				"th",
@@ -228,10 +244,6 @@
 				"routeName"
 			],
 			[
-				"vi",
-				"view"
-			],
-			[
 				"pos",
 				"post_tags"
 			],
@@ -264,10 +276,98 @@
 	"buffers":
 	[
 		{
+			"file": "app/Http/routes.php",
+			"settings":
+			{
+				"buffer_size": 539,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Providers/AppServiceProvider.php",
+			"settings":
+			{
+				"buffer_size": 1551,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "database/migrations/2016_05_31_044547_create_category_post_pivot_table.php",
+			"settings":
+			{
+				"buffer_size": 871,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Http/Controllers/Auth/AuthController.php",
+			"settings":
+			{
+				"buffer_size": 1958,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "resources/views/partials/header.blade.php",
 			"settings":
 			{
-				"buffer_size": 3110,
+				"buffer_size": 2327,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/Http/Controllers/PostController.php",
+			"settings":
+			{
+				"buffer_size": 4046,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "resources/views/posts/edit.blade.php",
+			"settings":
+			{
+				"buffer_size": 2589,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "resources/views/posts/create.blade.php",
+			"settings":
+			{
+				"buffer_size": 2178,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "tests/ExampleTest.php",
+			"settings":
+			{
+				"buffer_size": 1155,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/ImpersonatesUsers.php",
+			"settings":
+			{
+				"buffer_size": 828,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithDatabase.php",
+			"settings":
+			{
+				"buffer_size": 2504,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/wamp/www/laravel/pluralsight/product-microservice-example/tests/ExampleTest.php",
+			"settings":
+			{
+				"buffer_size": 4803,
 				"line_ending": "Windows"
 			}
 		}
@@ -279,10 +379,14 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 64.0,
-		"last_filter": "dupl",
+		"height": 354.0,
+		"last_filter": "dele",
 		"selected_items":
 		[
+			[
+				"dele",
+				"ANF: Delete Current File"
+			],
 			[
 				"dupl",
 				"File: Duplicate"
@@ -340,10 +444,6 @@
 				"Package Control: Install Package"
 			],
 			[
-				"dele",
-				"ANF: Delete Current File"
-			],
-			[
 				"delet",
 				"ANF: Delete Current File"
 			],
@@ -364,7 +464,7 @@
 				"Fetch: File"
 			]
 		],
-		"width": 512.0
+		"width": 494.0
 	},
 	"console":
 	{
@@ -390,6 +490,8 @@
 		"/C/wamp/www/laravel/blog/app/Http",
 		"/C/wamp/www/laravel/blog/app/Http/Controllers",
 		"/C/wamp/www/laravel/blog/app/Http/Controllers/Auth",
+		"/C/wamp/www/laravel/blog/database",
+		"/C/wamp/www/laravel/blog/database/migrations",
 		"/C/wamp/www/laravel/blog/resources",
 		"/C/wamp/www/laravel/blog/resources/views",
 		"/C/wamp/www/laravel/blog/resources/views/layouts",
@@ -398,17 +500,25 @@
 	],
 	"file_history":
 	[
+		"/C/wamp/www/laravel/blog/public/css/style.css",
+		"/C/wamp/www/laravel/blog/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php",
+		"/C/wamp/www/laravel/blog/database/seeds/DatabaseSeeder.php",
+		"/C/wamp/www/laravel/blog/database/seeds/CategoriesTableSeeder.php",
+		"/C/wamp/www/laravel/blog/app/Http/Controllers/PostCategoryController.php",
+		"/C/wamp/www/laravel/blog/app/Post.php",
+		"/C/wamp/www/laravel/blog/app/Category.php",
+		"/C/wamp/www/laravel/blog/database/migrations/2016_05_31_043428_create_categories_table.php",
+		"/C/wamp/www/laravel/blog/database/migrations/2016_05_31_042413_create_post_categories_table.php",
+		"/C/wamp/www/laravel/blog/app/PostCategory.php",
 		"/C/Users/placid/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
 		"/C/Users/placid/AppData/Roaming/Sublime Text 3/Packages/User/Material-Theme.sublime-theme",
 		"/C/wamp/www/laravel/blog/readme.md",
 		"/C/wamp/www/laravel/blog/app/Http/Controllers/PostController.php",
 		"/C/wamp/www/laravel/blog/app/Http/Controllers/Auth/AuthController.php",
-		"/C/wamp/www/laravel/blog/app/Post.php",
 		"/C/wamp/www/laravel/blog/resources/views/welcome.blade.php",
 		"/C/wamp/www/laravel/blog/resources/views/posts/show.blade.php",
 		"/C/wamp/www/laravel/blog/resources/views/pages/project-details.blade.php",
 		"/C/wamp/www/laravel/blog/app/User.php",
-		"/C/wamp/www/laravel/blog/database/seeds/DatabaseSeeder.php",
 		"/C/wamp/www/laravel/blog/resources/views/posts/create.blade.php",
 		"/C/wamp/www/laravel/blog/app/Http/routes.php",
 		"/C/wamp/www/laravel/blog/resources/views/posts/index.blade.php",
@@ -434,7 +544,6 @@
 		"/C/wamp/www/laravel/blog/tests/ExampleTest.php",
 		"/C/wamp/www/laravel/blog/database/migrations/2016_05_25_095718_create_roles_table.php",
 		"/C/wamp/www/laravel/blog/database/migrations/2016_05_26_095155_add_slug_to_posts_table.php",
-		"/C/wamp/www/laravel/blog/public/css/style.css",
 		"/C/wamp/www/laravel/blog/resources/views/users/index.blade.php",
 		"/C/wamp/www/laravel/blog/database/migrations/2016_05_26_052235_create_posts_table.php",
 		"/C/wamp/www/laravel/blog/database/migrations/2016_05_26_073055_add_unique_to_name_to_roles_table.php",
@@ -518,14 +627,7 @@
 		"/C/wamp/www/laravel/product_service/vendor/laravel/framework/src/Illuminate/Routing/Controller.php",
 		"/C/wamp/www/laravel/product_service/app/Http/Controllers/Controller.php",
 		"/C/wamp/www/laravel/product_service/vendor/laravel/framework/src/Illuminate/Support/Facades/Auth.php",
-		"/C/wamp/www/laravel/product_service/database/migrations/2016_05_10_131132_create_products_table.php",
-		"/C/wamp/www/laravel/product_service/.env",
-		"/C/wamp/www/laravel/product_service/config/app.php",
-		"/C/wamp/www/laravel/product_service/database/migrations/2016_05_10_131157_create_descriptions_table.php",
-		"/C/wamp/www/laravel/product_service/vendor/laravel/framework/src/Illuminate/Support/Collection.php",
-		"/C/wamp/www/laravel/product_service/phpunit.xml",
-		"/C/wamp/www/laravel/product_service/vendor/bin/phpunit",
-		"/C/wamp/www/laravel/product_service/vendor/laravel/framework/src/Illuminate/Support/Arr.php"
+		"/C/wamp/www/laravel/product_service/database/migrations/2016_05_10_131132_create_products_table.php"
 	],
 	"find":
 	{
@@ -544,6 +646,18 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"CategoriesTableSeeder",
+			"Coding",
+			"Uncategorized",
+			"list(",
+			"403",
+			"seeInDatabase",
+			"post",
+			"Post::",
+			"Post",
+			"post",
+			"Post::",
+			"posts.",
 			"value",
 			"title",
 			"*",
@@ -675,24 +789,142 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 5,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "resources/views/partials/header.blade.php",
+					"file": "app/Http/routes.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3110,
+						"buffer_size": 539,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3103,
-								3103
+								539,
+								539
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/Providers/AppServiceProvider.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1551,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								247,
+								247
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 168.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "database/migrations/2016_05_31_044547_create_category_post_pivot_table.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 871,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								709,
+								709
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/Http/Controllers/Auth/AuthController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1958,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								903,
+								903
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 672.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "resources/views/partials/header.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2327,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1327,
+								1327
 							]
 						],
 						"settings":
@@ -702,10 +934,220 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1344.0,
+						"translation.y": 252.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/Http/Controllers/PostController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4046,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2637,
+								2637
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2772.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "resources/views/posts/edit.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2589,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1282,
+								1282
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 588.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "resources/views/posts/create.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2178,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								740,
+								740
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 420.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "tests/ExampleTest.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1155,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								682,
+								437
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 336.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/ImpersonatesUsers.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 828,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								386,
+								386
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithDatabase.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2504,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1407,
+								1424
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 967.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "/C/wamp/www/laravel/pluralsight/product-microservice-example/tests/ExampleTest.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4803,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1176.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
 					"type": "text"
 				}
 			]
@@ -760,12 +1202,80 @@
 		"selected_items":
 		[
 			[
-				"read",
-				"readme.md"
+				"",
+				"app\\Http\\Controllers\\PostController.php"
 			],
 			[
-				"",
-				"resources\\views\\posts\\unpublished-posts.blade.php"
+				"edit",
+				"resources\\views\\posts\\edit.blade.php"
+			],
+			[
+				"categoriestableseeder",
+				"database\\seeds\\CategoriesTableSeeder.php"
+			],
+			[
+				"d",
+				"database\\seeds\\DatabaseSeeder.php"
+			],
+			[
+				"styl",
+				"public\\css\\style.css"
+			],
+			[
+				"create.bl",
+				"resources\\views\\posts\\create.blade.php"
+			],
+			[
+				"pc",
+				"app\\Http\\Controllers\\PostController.php"
+			],
+			[
+				"r",
+				"app\\Http\\routes.php"
+			],
+			[
+				"e",
+				"tests\\ExampleTest.php"
+			],
+			[
+				"pcc",
+				"app\\Http\\Controllers\\PostCategoryController.php"
+			],
+			[
+				"appse",
+				"app\\Providers\\AppServiceProvider.php"
+			],
+			[
+				"creacat",
+				"database\\migrations\\2016_05_31_043428_create_categories_table.php"
+			],
+			[
+				"cat",
+				"app\\Category.php"
+			],
+			[
+				"createpostca",
+				"database\\migrations\\2016_05_31_042413_create_post_categories_table.php"
+			],
+			[
+				"post",
+				"app\\Post.php"
+			],
+			[
+				"categ",
+				"app\\PostCategory.php"
+			],
+			[
+				"rout",
+				"app\\Http\\routes.php"
+			],
+			[
+				"po",
+				"app\\Post.php"
+			],
+			[
+				"read",
+				"readme.md"
 			],
 			[
 				"show",
@@ -796,14 +1306,6 @@
 				"resources\\views\\welcome.blade.php"
 			],
 			[
-				"po",
-				"app\\Post.php"
-			],
-			[
-				"create.bl",
-				"resources\\views\\posts\\create.blade.php"
-			],
-			[
 				"asp",
 				"app\\Providers\\AuthServiceProvider.php"
 			],
@@ -813,10 +1315,6 @@
 			],
 			[
 				"edi",
-				"resources\\views\\posts\\edit.blade.php"
-			],
-			[
-				"edit",
 				"resources\\views\\posts\\edit.blade.php"
 			],
 			[
@@ -846,10 +1344,6 @@
 			[
 				"rts",
 				"database\\seeds\\RolesTableSeeder.php"
-			],
-			[
-				"d",
-				"database\\seeds\\DatabaseSeeder.php"
 			],
 			[
 				".git",
@@ -1060,10 +1554,6 @@
 				"app\\Http\\Controllers\\PagesController.php"
 			],
 			[
-				"rout",
-				"app\\Http\\routes.php"
-			],
-			[
 				"mode",
 				"database\\factories\\ModelFactory.php"
 			],
@@ -1164,10 +1654,6 @@
 				"storage\\logs\\laravel.log"
 			],
 			[
-				"post",
-				"app\\Post.php"
-			],
-			[
 				"createpos",
 				"database\\migrations\\2016_05_06_120042_create_posts_table.php"
 			],
@@ -1226,50 +1712,6 @@
 			[
 				"remove",
 				"database\\migrations\\2016_05_02_092315_remove_age_and_add_birtdate_to_cvs_table.php"
-			],
-			[
-				"cvcon",
-				"app\\Http\\Controllers\\CvController.php"
-			],
-			[
-				"authcon",
-				"app\\Http\\Controllers\\Auth\\AuthController.php"
-			],
-			[
-				"authser",
-				"app\\Providers\\AuthServiceProvider.php"
-			],
-			[
-				"addimage",
-				"database\\migrations\\2016_05_02_073558_add_image_path_to_cvs_table.php"
-			],
-			[
-				"createcvta",
-				"database\\migrations\\2016_05_02_070706_create_cvs_table.php"
-			],
-			[
-				"createroles",
-				"database\\migrations\\2016_05_02_063214_create_roles_table.php"
-			],
-			[
-				"config/mail",
-				"config\\mail.php"
-			],
-			[
-				"rou",
-				"app\\Http\\routes.php"
-			],
-			[
-				"file",
-				"config\\filesystems.php"
-			],
-			[
-				"illuminate/foundation/auth",
-				"vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Auth\\ResetsPasswords.php"
-			],
-			[
-				"registersusers",
-				"vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Auth\\RegistersUsers.php"
 			]
 		],
 		"width": 0.0
@@ -1299,7 +1741,7 @@
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 307.0,
 	"status_bar_visible": true,
 	"template_settings":

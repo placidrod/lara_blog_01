@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use App\Category;
 use App\Http\Requests;
 
 class PostController extends Controller
@@ -47,7 +48,9 @@ class PostController extends Controller
     {
         $this->authorize('author-post');
 
-        return view('posts.create');
+        $categories = Category::all();
+
+        return view('posts.create', compact('categories'));
     }
 
     /**
@@ -64,6 +67,10 @@ class PostController extends Controller
             $this->authorize('publish-post');
         }
 
+        if(! $request->categories) {
+            $request->categories = ['1'];
+        }
+
         $this->validate($request, [
             'title' => 'required|min:3',
             'body' => 'required',
@@ -71,9 +78,11 @@ class PostController extends Controller
             'published_at' => 'required_if:publish_status,publish',
         ]);
 
-        auth()->user()->posts()->create($request->all());
+        $post = auth()->user()->posts()->create($request->all());
 
-        return redirect()->route('posts.index');
+        $post->categories()->sync($request->categories);
+
+        return redirect()->route('posts.admin-index');
     }
 
     /**
@@ -101,7 +110,11 @@ class PostController extends Controller
     {
         $this->authorize('update-post', $post);
 
-        return view('posts.edit', compact('post'));
+        $categories = Category::all();
+
+        $post_categories = $post->categories->pluck('id')->toArray();
+
+        return view('posts.edit', compact('post', 'post_categories', 'categories'));
     }
 
     /**
@@ -119,6 +132,10 @@ class PostController extends Controller
             $this->authorize('publish-post');
         }
 
+        if(! $request->categories) {
+            $request->categories = ['1'];
+        }
+
         $this->validate($request, [
             'title' => 'required|min:3',
             'body' => 'required',
@@ -128,7 +145,9 @@ class PostController extends Controller
 
         $post->update($request->all());
 
-        return redirect()->route('posts.index');
+        $post->categories()->sync($request->categories);
+
+        return redirect()->route('posts.admin-index');
     }
 
     /**
