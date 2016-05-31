@@ -8,6 +8,11 @@ use App\Http\Requests;
 
 class PostController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth', ['except'=> ['index', 'show']]);
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -15,9 +20,22 @@ class PostController extends Controller
      */
     public function index()
     {
+        $posts = Post::published()->orderBy('published_at', 'desc')->get();
+
+        return view('posts.index', compact('posts'));
+    }
+
+    public function adminIndex()
+    {
         $posts = Post::all();
 
         return view('posts.index', compact('posts'));
+    }
+
+    public function unpublishedPosts()
+    {
+        $unpublished_posts = Post::unpublished();
+        return view('posts.unpublished-posts', ['posts'=>$unpublished_posts]);
     }
 
     /**

@@ -16,9 +16,7 @@ class Post extends Model
 
   public function scopePublished($query)
   {
-    return $query->where([ ['publish_status','published'], ['published_at', '<', Carbon::now()] ])
-                ->orderBy('published_at', 'desc')
-                ->get();
+    return $query->where([ ['publish_status','published'], ['published_at', '<', Carbon::now()] ]);
   }
 
   public function scopeUnpublished($query)
