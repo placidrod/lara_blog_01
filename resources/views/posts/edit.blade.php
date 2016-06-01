@@ -32,8 +32,8 @@
                       type="checkbox" 
                       value="{{ $category->id }}" 
                       name="categories[]" 
-                      @if(in_array($category->id, $post_categories)) checked @endif>
-                    {{ $category->title }}
+                      @if(in_array($category->id, $post->getCategoryIds()->toArray())) checked @endif>
+                      {{ $category->title }}
                   </label>
                 </div>           
               @endforeach

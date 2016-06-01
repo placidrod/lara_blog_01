@@ -16,10 +16,6 @@
       <ul class="nav navbar-nav">
         <!-- <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li> -->
 
-        @if(auth()->guest())
-        <li><a href="{{ route('posts.index') }}">All Posts</a></li>
-        @endif
-
         @can('author-post')
         <li><a href="{{ route('posts.admin-index') }}">All Posts</a></li>
         <li><a href="{{ route('posts.create') }}">Create Post</a></li>
@@ -28,13 +24,15 @@
         @can('publish-post')
         <li><a href="{{ route('posts.unpublished-posts') }}">Posts Pending Reveiew</a></li>
         @endcan
+
+        @can('manage-users')
+        <li><a href="{{ url('users') }}">Manage Users</a></li>
+        @endcan
         
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="{{ url('project-details') }}">Project Details</a></li>
-        @can('manage-users')
-        <li><a href="{{ url('users') }}">Manage Users</a></li>
-        @endcan
+        <li><a href="{{ route('posts.index') }}">All Published Posts</a></li>
         <!-- Authentication Links -->
         @if (Auth::guest())
             <li><a href="{{ url('/login') }}">Login</a></li>

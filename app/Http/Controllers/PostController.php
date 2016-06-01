@@ -112,9 +112,7 @@ class PostController extends Controller
 
         $categories = Category::all();
 
-        $post_categories = $post->categories->pluck('id')->toArray();
-
-        return view('posts.edit', compact('post', 'post_categories', 'categories'));
+        return view('posts.edit', compact('post', 'categories'));
     }
 
     /**

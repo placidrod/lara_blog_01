@@ -45,4 +45,9 @@ class Post extends Model
   {
     return $this->belongsToMany(Category::class);
   }
+
+  public function getCategoryIds()
+  {
+    return $this->categories->pluck('id');
+  }
 }
