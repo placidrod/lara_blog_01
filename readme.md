@@ -15,10 +15,13 @@
   * Soft Deletes of Posts
   * Draft, Pending Review by Author
   * Publish Post by Editor and Admin
+3. Post Categories
+  * Add/Remove Categories from Create/Edit Post pages
+  * Add New Categories in Create/Edit Post pages
 
 ## Planned Features
 
-1. Posts - Categories
+1. Post - Featured Image
 
 ## My Projects
 
