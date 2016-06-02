@@ -1,2 +1,4 @@
-<h3>This is sidebar</h3>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, neque cum totam atque velit ex.</p>
+<h3>Categories</h3>
+@foreach($categories as $cat)
+  <li><a href="/categories/{{ $cat->slug }}">{{ $cat->title }}</a></li>
+@endforeach

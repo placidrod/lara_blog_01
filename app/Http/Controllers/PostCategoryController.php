@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Post;
 use App\Category;
 use App\Http\Requests;
 
@@ -53,9 +54,16 @@ class PostCategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($slug)
     {
-        //
+        $cat = Category::where('slug', $slug)->first();
+        $posts = $cat->posts()->paginate();
+
+        if(! $posts) return response('Sorry, Nothing found here.', 404); 
+
+        $categories = Category::all();
+
+        return view('posts.index', compact('posts', 'categories'));
     }
 
     /**

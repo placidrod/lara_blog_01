@@ -21,9 +21,11 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::published()->orderBy('published_at', 'desc')->get();
+        $posts = Post::published()->with('categories')->orderBy('published_at', 'desc')->get();
 
-        return view('posts.index', compact('posts'));
+        $categories = Category::all();
+
+        return view('posts.index', compact('posts', 'categories'));
     }
 
     public function adminIndex()
@@ -95,9 +97,11 @@ class PostController extends Controller
     {
         $post = Post::where('slug', $slug)->first();
 
+        $categories = Category::all();
+
         if(! $post) return response('Sorry, Nothing found here.', 404); 
 
-        return view('posts.show', compact('post'));
+        return view('posts.show', compact('post', 'categories'));
     }
 
     /**

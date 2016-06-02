@@ -1,17 +1,22 @@
-@extends('layouts.default')
+@extends('layouts.sidebar-right')
 
 @section('title', 'All Posts')
 
 @section('content')
 
-<div class="container">
-  <h1>All Posts</h1>
+<div class="">
   @if(count($posts))
     @foreach($posts as $post)
-      <h3>{{$post->title}}</h3>
+      <h2>{{$post->title}}</h2>
       <h5>by {{ $post->user->name }}</h5>
       <div>
-        {{$post->body}}
+        {{ substr($post->body, 0, 500) }}
+        <div class="small category-links">
+          Cateories: 
+          @foreach($post->categories as $cat)
+            <a href="/categories/{{ $cat->slug }}"><u>{{ $cat->title }}</u></a>&nbsp;
+          @endforeach
+        </div>
         <div>
           <a href="{{ route('posts.show', $post->slug) }}" class="text-primary"><strong>Read more</strong></a>
           @can('update-post', $post)

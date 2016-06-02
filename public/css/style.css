@@ -45,3 +45,7 @@ label {
 	overflow-y: scroll;
 	background-color: #E6E6E6;
 }
+
+.category-links {
+	margin-top: 12px;
+}
