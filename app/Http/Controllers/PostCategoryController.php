@@ -37,7 +37,14 @@ class PostCategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if($request->ajax()) {
+            $cat_exists = Category::where('title', $request->newCatTitle)->first();
+            if($cat_exists) {
+                return "duplicate";
+            }
+            $new_cat = Category::create(['title'=>$request->newCatTitle]);
+            return ['id' => $new_cat->id, 'title' => $new_cat->title];
+        }
     }
 
     /**

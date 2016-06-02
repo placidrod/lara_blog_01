@@ -34,3 +34,14 @@ body {
 .zero-bottom-margin {
 	margin-bottom: 0;
 }
+label {
+	font-size: 1.15em;
+}
+.sub-label {
+	font-size: 1em;
+}
+#category-select-div {
+	max-height: 160px;
+	overflow-y: scroll;
+	background-color: #E6E6E6;
+}

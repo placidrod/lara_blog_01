@@ -22,18 +22,29 @@
       </div>
       <div class="col-md-4">
         <div class="form-group">
-          <label class="zero-bottom-margin">Categories</label>
+          <label class="">Categories</label>
+          <div id="category-select-div">
             @if(count($categories))
               @foreach($categories as $category)
                 <div class="checkbox category-select-checkbox">
-                  <label>
+                  <label class="sub-label">
                     <input type="checkbox" value="{{ $category->id }}" name="categories[]">
                     {{ $category->title }}
                   </label>
                 </div>           
               @endforeach
             @endif
+          </div>
         </div>
+        
+        <div class="form-group">
+          <label for="" class="sub-label">Add New Category</label>
+          <input type="text" class="form-control input-sm" id="new-category">
+        </div>
+        <div class="form-group">
+          <button class="btn btn-default btn-sm" id="add-new-category-button" data-token="{{ csrf_token() }}">Add New Category</button>
+        </div>
+
         <div class="form-group">
           <label for="body">Publish Status</label>
           <select name="publish_status" id="publish_status" class="form-control">
@@ -58,5 +69,5 @@
     </div> <!-- /row -->
   </form>
 </div>
-
+<div class="alert alert-warning alert-fixed-top-right" role="alert">Duplicate !!</div>
 @endsection

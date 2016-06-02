@@ -19,3 +19,7 @@ Route::get('admin-index', ['as' => 'posts.admin-index', 'uses' => 'PostControlle
 Route::get('unpublished-posts', ['as' => 'posts.unpublished-posts', 'uses' => 'PostController@unpublishedPosts']);
 
 Route::resource('posts', 'PostController');
+
+// Route::post('categories', 'PostCategoryController@store');
+
+Route::resource('categories', 'PostCategoryController');
