@@ -18,6 +18,8 @@
 3. Post Categories
   * Add/Remove Categories from Create/Edit Post pages
   * Add New Categories in Create/Edit Post pages
+  * Viewing posts by categories
+  * Navigating by category slugs
 
 ## Planned Features
 
