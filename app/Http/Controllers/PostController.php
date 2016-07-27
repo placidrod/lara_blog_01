@@ -32,7 +32,9 @@ class PostController extends Controller
     {
         $posts = Post::all();
 
-        return view('posts.index', compact('posts'));
+        $categories = Category::all();
+
+        return view('posts.index', compact('posts', 'categories'));
     }
 
     public function unpublishedPosts()

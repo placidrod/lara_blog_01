@@ -12,6 +12,7 @@
   * Title
   * Body
   * Auto generated slugs
+  * Post slug in address bar
   * Soft Deletes of Posts
   * Draft, Pending Review by Author
   * Publish Post by Editor and Admin
